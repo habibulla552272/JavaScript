@@ -113,6 +113,36 @@ console.log(user3.sizes.width);
 
 
 
+//object methods 'this'
 
+const user4={
+    sayHi(){
+        console.log('Hello');
+        
+    }
+}
+
+
+user4.sayHi();
+
+
+const user5={
+    name:'johan'
+}
+const admin= {
+    name: 'Admin'
+};
+
+function sayHi(){
+    console.log(this.name);
+    
+}
+
+user5.f=sayHi;
+admin.f=sayHi;
+
+user.f();
+admin.f();
+admin.f(); //dot or square brackets access the method doesn't matter
 
 
